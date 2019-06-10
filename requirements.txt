@@ -1,6 +1,6 @@
 astroid==2.2.5
 dj-database-url==0.5.0
-Django==2.0.13
+#Django==2.0.13
 django-debug-toolbar==1.11
 isort==4.3.20
 lazy-object-proxy==1.4.1
@@ -16,3 +16,20 @@ django-extensions==2.1.7
 #django
 gunicorn
 django-heroku
+
+#django rest
+certifi==2019.3.9
+chardet==3.0.4
+coreapi==2.3.3
+coreapi-cli==1.0.9
+coreschema==0.0.4
+Django==2.2.2
+djangorestframework==3.9.4
+httpie==1.0.2
+idna==2.8
+pkg-resources==0.0.0
+Pygments==2.4.2
+pytz==2019.1
+requests==2.22.0
+sqlparse==0.3.0
+urllib3==1.25.3
