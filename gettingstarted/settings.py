@@ -120,3 +120,9 @@ STATIC_URL = "/static/"
 
 django_heroku.settings(locals())
 LOGIN_REDIRECT_URL = '/'
+
+# REST
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
