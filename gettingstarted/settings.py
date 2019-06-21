@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'snippets.apps.SnippetsConfig',
     'django_celery_results',
     'djcelery',
+    'celery_example',
 ]
 
 MIDDLEWARE = [
@@ -122,7 +123,10 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
 
-django_heroku.settings(locals())
+HEROKU_EN = os.environ.get('HEROKU_EN', False)
+if HEROKU_EN:
+    django_heroku.settings(locals())
+
 LOGIN_REDIRECT_URL = '/'
 
 # REST
@@ -136,6 +140,15 @@ REST_FRAMEWORK = {
 
 # DJANGO CELERY RESULTS BACKEND
 
-CELERY_RESULT_BACKEND = 'django-db'
+#CELERY_RESULT_BACKEND = 'django-db'
 
-CELERY_CACHE_BACKEND = 'django-cache'
+#CELERY_CACHE_BACKEND = 'django-cache'
+
+#email settings
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+SERVER_EMAIL = ""
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

@@ -1,6 +1,6 @@
 from django.urls import path, include
 
-from django.contrib import admin
+#from django.contrib import admin
 
 from django.contrib import admin
 from django.conf import settings
@@ -8,6 +8,7 @@ from django.conf.urls import include, url  # For django versions before 2.0
 from django.urls import include, path  # For django versions from 2.0 and up
 
 from django.contrib.auth import views
+from celery_example.views import index
 
 
 
@@ -29,6 +30,7 @@ urlpatterns = [
     path('', include('blog.urls')),
     path('api/', include('snippets.urls')),
     path('api-auth/', include('rest_framework.urls')),
+    path('celery', index),
 ]
 
 if settings.DEBUG:
