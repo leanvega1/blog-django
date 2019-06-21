@@ -30,7 +30,7 @@ urlpatterns = [
     path('', include('blog.urls')),
     path('api/', include('snippets.urls')),
     path('api-auth/', include('rest_framework.urls')),
-    path('celery', index),
+    path('celery/', index),
 ]
 
 if settings.DEBUG:
