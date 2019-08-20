@@ -10,6 +10,8 @@ from django.urls import include, path  # For django versions from 2.0 and up
 from django.contrib.auth import views
 from celery_example.views import index
 
+from posts.views import home
+
 
 
 admin.autodiscover()
@@ -31,6 +33,7 @@ urlpatterns = [
     path('api/', include('snippets.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('celery/', index),
+    path('posts', home)
 ]
 
 if settings.DEBUG:
