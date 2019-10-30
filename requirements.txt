@@ -25,7 +25,7 @@ coreapi-cli==1.0.9
 coreschema==0.0.4
 Django==2.2.2
 djangorestframework==3.9.4
-httpie==1.0.2
+httpie==1.0.3
 idna==2.8
 #pkg-resources==0.0.0
 Pygments==2.4.2
